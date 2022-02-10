@@ -1,0 +1,6 @@
+@import "config/index.css";
+
+body {
+    margin: 0;
+    font-family: var(--varFontFamily);
+}
