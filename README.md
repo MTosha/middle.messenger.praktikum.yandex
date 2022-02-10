@@ -1,3 +1,5 @@
+### ссылка на PR из ветки sprint_1 в ветку main
+
 #### ссылка на дизайн в Figma: https://www.figma.com/files/recent?fuid=1040260305409406663
 #### ссылка на домен Netlify https://cocky-swartz-3fbfcf.netlify.app/
 
