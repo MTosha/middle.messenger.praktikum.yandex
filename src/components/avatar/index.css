@@ -1,0 +1,19 @@
+.avatar {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+    background-color: #EFEFEF;
+    border-radius: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+        opacity: 0;
+    }
+
+    input:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+}
