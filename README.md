@@ -1,6 +1,9 @@
 #### ссылка на дизайн в Figma: https://www.figma.com/files/recent?fuid=1040260305409406663
 #### ссылка на домен Netlify https://cocky-swartz-3fbfcf.netlify.app/
 
+### ссылка на PR sprint_1 https://github.com/MTosha/middle.messenger.praktikum.yandex/pull/1
+
+
 ## Описание
 
 Приложение "Messanger" позволит общаться используя интерфейс приложения.
