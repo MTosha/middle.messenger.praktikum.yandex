@@ -1,6 +1,6 @@
-const Handlebars = require("handlebars");
+import * as Handlebars from "handlebars";
 
-Handlebars.registerPartial('avatar', `
+Handlebars.registerPartial("avatar", `
   <div class="avatar">
       <input type="file" name="avatar" alt="avatar">
   </div>

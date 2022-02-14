@@ -13,7 +13,7 @@
 
 .blue {
     background-color: var(--varMainBlue);
-    color: #ffffff;
+    color: var(--varWhite);
 }
 
 .back-button {
@@ -44,5 +44,5 @@
 }
 
 .red {
-    color: #FF0000;
+    color: var(--varMainRed);
 }

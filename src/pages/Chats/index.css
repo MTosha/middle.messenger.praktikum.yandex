@@ -11,7 +11,7 @@
         min-width: 310px;
         max-width: 30%;
         height: 100%;
-        border-right: 1px solid #EAEAEA;
+        border-right: 1px solid var(--varBorderGray);
 
 
         .profile-link {
@@ -19,15 +19,15 @@
             text-decoration: none;
             text-align: end;
             padding: 20px 30px;
-            color: #999999;
+            color: var(--varMainGray);
 
             .arrow {
                 position: absolute;
                 margin: 5px 10px;
                 width: 8px;
                 height: 8px;
-                border-top: 1px solid #999999;
-                border-right: 1px solid #999999;
+                border-top: 1px solid var(--varMainGray);
+                border-right: 1px solid var(--varMainGray);
                 box-sizing: border-box;
                 transform: rotate(45deg);
             }
@@ -43,7 +43,7 @@
             }
 
             li:hover {
-                background: #E4EDFD;
+                background: var(--varLightGray2);
             }
         }
     }

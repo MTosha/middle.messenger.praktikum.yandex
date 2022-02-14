@@ -1,4 +1,4 @@
-const Handlebars = require("handlebars");
+import * as Handlebars from "handlebars";
 
 export const editProfile = Handlebars.compile(`
    <div class="wrapper-profile">

@@ -1,4 +1,5 @@
-const Handlebars = require("handlebars");
+import * as Handlebars from "handlebars";
+
 export const chats = Handlebars.compile(`
   <div class="wrapper-chats">
     <div class="chats-list">

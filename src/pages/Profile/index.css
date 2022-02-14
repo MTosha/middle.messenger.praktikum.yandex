@@ -7,8 +7,8 @@
         align-items: center;
         width: 65px;
         height: 100vh;
-        border-right: 1px solid #EAEAEA;
-        background-color: #FBFBFB;
+        border-right: 1px solid var(--varBorderGray);
+        background-color: var(--varWhite2);
     }
 
     .wrapper-profile-block {
@@ -27,7 +27,7 @@
         }
 
         .profile-block {
-            background-color: #ffffff;
+            background-color: var(--varWhite);
             width: 300px;
         }
 
