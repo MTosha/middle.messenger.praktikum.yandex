@@ -2,7 +2,7 @@
     width: 130px;
     height: 130px;
     margin: 0 auto;
-    background-color: #EFEFEF;
+    background-color: var(--varBackWhite);
     border-radius: 130px;
     display: flex;
     justify-content: center;

@@ -1,4 +1,17 @@
 :root {
     --varFontFamily: sans-serif;
+
     --varMainBlue: #3369F3;
+    --varBackWhite: #EFEFEF;
+    --varWhite: #ffffff;
+    --varWhite2: #FBFBFB;
+    --varBorderGray: #EAEAEA;
+    --varLightGray: #F9F0DA;
+    --varLightGray2: #E4EDFD;
+    --varGray: #bdbdbd;
+    --varMainRed: #FF0000;
+    --varMainGray: #999999;
+    --varMainBlack: #212529;
+    --varMainShadow: #9e9e9e40;
+    --varShadow: #00000024;
 }

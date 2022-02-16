@@ -1,4 +1,5 @@
-const Handlebars = require("handlebars");
+import * as Handlebars from "handlebars";
+
 export const button = Handlebars.compile(`
   {{#if blue}}
     <div class="wrapper blue" id={{id}}>
@@ -11,7 +12,7 @@ export const button = Handlebars.compile(`
   {{/if}}
 `);
 
-Handlebars.registerPartial('btn', `
+Handlebars.registerPartial("btn", `
   {{#if blue}}
     <a class="wrapper blue" id={{id}} href={{href}}>
        {{text}}
@@ -23,11 +24,11 @@ Handlebars.registerPartial('btn', `
   {{/if}}
 `);
 
-Handlebars.registerPartial('backBtn', `
+Handlebars.registerPartial("backBtn", `
     <a class="back-button" id={{id}} href={{href}}></a>
 `)
 
-Handlebars.registerPartial('editBtn', `
+Handlebars.registerPartial("editBtn", `
     {{#if red}}
       <a class="edit red" id={{id}} href={{href}}>{{text}}</a>
       {{else}}

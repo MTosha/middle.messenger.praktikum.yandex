@@ -1,4 +1,5 @@
-const Handlebars = require("handlebars");
+import * as Handlebars from "handlebars";
+
 export const input = Handlebars.compile(`
     <div class="wrapper-input">
       {{#if pass}}
@@ -11,7 +12,7 @@ export const input = Handlebars.compile(`
     </div>
 `);
 
-Handlebars.registerPartial('signIn', `
+Handlebars.registerPartial("signIn", `
    <div class="wrapper-input">
       {{#if pass}}
         <input type="password" id="password" name={{label}} placeholder="empty">
@@ -23,14 +24,14 @@ Handlebars.registerPartial('signIn', `
     </div>
 `);
 
-Handlebars.registerPartial('signUp', `
+Handlebars.registerPartial("signUp", `
    <div class="wrapper-input">
         <input type={{type}} id={{id}} name={{name_input}} placeholder="empty">
         <label for={{id}}>{{label}}</label>
     </div>
 `);
 
-Handlebars.registerPartial('input', `
+Handlebars.registerPartial("input", `
     <div class="wrapper-input">
     {{#if readonly}}
         <input type={{type}} id={{id}} name={{name_input}} readonly value={{value}}>
@@ -42,7 +43,7 @@ Handlebars.registerPartial('input', `
     </div>
 `);
 
-Handlebars.registerPartial('searchInput', `
+Handlebars.registerPartial("searchInput", `
    <div class="wrapper-search">
         <button type="submit"></button>
         <input type="text" id={{id}} name={{name_input}} placeholder={{placeholder}}>

@@ -5,13 +5,13 @@
     align-items: center;
     padding: 10px 0;
     margin: 0 10px;
-    border-top: 1px solid #EAEAEA;
+    border-top: 1px solid var(--varBorderGray);
 
     .chat-img-wrapper {
         width: 47px;
         height: 47px;
         border-radius: 50px;
-        background-color: #EFEFEF;
+        background-color: var(--varBackWhite);
         margin-right: 10px;
 
     }
@@ -28,7 +28,7 @@
             font-size: 12px;
             line-height: 15px;
             font-weight: 500;
-            color: #999999;
+            color: var(--varMainGray);
         }
 
     }
@@ -42,7 +42,7 @@
             font-size: 9px;
             line-height: 13px;
             font-weight: 500;
-            color: #999999;
+            color: var(--varMainGray);
         }
 
         .unread-count {
@@ -54,7 +54,7 @@
             line-height: 22px;
             text-align: center;
             font-weight: 500;
-            color: #ffffff;
+            color: var(--varWhite);
         }
     }
 }
@@ -70,6 +70,6 @@
         font-size: 12px;
         font-weight: 500;
         text-align: center;
-        color: #999999;
+        color: var(--varMainGray);
     }
 }

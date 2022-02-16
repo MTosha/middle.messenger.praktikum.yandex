@@ -1,4 +1,5 @@
-const Handlebars = require("handlebars");
+import * as Handlebars from "handlebars";
+
 export const sign = Handlebars.compile(`
   <div class="outer">
     <div class="wrapper_sign">

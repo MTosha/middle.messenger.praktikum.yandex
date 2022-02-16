@@ -1,5 +1,5 @@
 import {input} from "./index.tmpl";
-import "./index.css"
+import "./index.css";
 
 export const addInput = (element, label, pass = false) => {
   const content = {
