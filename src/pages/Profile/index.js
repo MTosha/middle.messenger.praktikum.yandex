@@ -10,7 +10,7 @@ import "../../components/input/index.css";
 const root = document.querySelector("#root");
 
 export const Profile = (element) => {
-  const content = {
+  const context = {
     name: "Иван",
     backBtnData: {
       id: "back-btn",
@@ -90,7 +90,7 @@ export const Profile = (element) => {
       },
     ]
   }
-  element.innerHTML = profile(content)
+  element.innerHTML = profile(context)
 }
 
 Profile(root)

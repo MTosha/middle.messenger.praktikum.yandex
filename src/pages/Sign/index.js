@@ -8,7 +8,7 @@ import "./index.css";
 const root = document.querySelector("#root");
 
 export const SignIn = (element) => {
-  const content = {
+  const context = {
     title: "Sign in",
     signIn: true,
     btnData: [
@@ -38,11 +38,11 @@ export const SignIn = (element) => {
       },
     ]
   }
-  element.innerHTML = sign(content);
+  element.innerHTML = sign(context);
 }
 
 export const SignUp = (element) => {
-  const content = {
+  const context = {
     title: "Sign up",
     signIn: false,
     btnData: [
@@ -104,7 +104,7 @@ export const SignUp = (element) => {
       },
     ]
   }
-  element.innerHTML = sign(content);
+  element.innerHTML = sign(context);
 }
 
 switch (window.location.pathname) {

@@ -5,13 +5,13 @@ import {SignIn, SignUp} from "../Sign";
 const root = document.querySelector("#root");
 
 export const showError = (element, errorCode, text, href, hrefName) => {
-  const content = {
+  const context = {
     errorCode: errorCode,
     text: text,
     href: href,
     hrefName: hrefName,
   }
-  element.innerHTML = error(content)
+  element.innerHTML = error(context)
 }
 
 switch (window.location.pathname) {
