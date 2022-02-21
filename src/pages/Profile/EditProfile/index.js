@@ -10,7 +10,7 @@ import "../../..//components/input/index.css";
 const root = document.querySelector("#root");
 
 export const EditProfile = (element) => {
-  const content = {
+  const context = {
     name: "Иван",
     backBtnData: {
       id: "back-btn",
@@ -76,7 +76,7 @@ export const EditProfile = (element) => {
         href: "/profile.html"
       },
   }
-  element.innerHTML = editProfile(content)
+  element.innerHTML = editProfile(context)
 }
 
 EditProfile(root)

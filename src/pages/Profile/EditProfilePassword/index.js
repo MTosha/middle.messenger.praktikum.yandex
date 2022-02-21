@@ -10,7 +10,7 @@ import "../../..//components/input/index.css";
 const root = document.querySelector("#root");
 
 export const EditProfilePassword = (element) => {
-  const content = {
+  const context = {
     name: "Иван",
     backBtnData: {
       id: "back-btn",
@@ -52,7 +52,7 @@ export const EditProfilePassword = (element) => {
       href: "/profile.html"
     },
   }
-  element.innerHTML = editProfilePassword(content)
+  element.innerHTML = editProfilePassword(context)
 }
 
 EditProfilePassword(root)

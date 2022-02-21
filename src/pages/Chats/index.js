@@ -6,7 +6,7 @@ import "../../components/chat/index.tmpl";
 const root = document.querySelector("#root");
 
 export const Chats = (element) => {
-  const content = {
+  const context = {
     profileHref: "/profile.html",
     profileName: "Profile",
     inputData: {
@@ -101,7 +101,7 @@ export const Chats = (element) => {
       },
     ]
   }
-  element.innerHTML = chats(content)
+  element.innerHTML = chats(context)
 }
 
 Chats(root)
