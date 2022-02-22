@@ -6,19 +6,11 @@ export const sign = Handlebars.compile(`
       <div>
         <h1>{{title}}</h1>
           <div class="position-top">
-            {{#if signIn}}
               <form>
                 {{#each inputData}}
-                    {{> signIn}}
+                    {{> input}}
                 {{/each}}
               </form>
-              {{else}}
-              <form>
-                {{#each inputData}}
-                    {{> signUp}}
-                {{/each}}
-              </form>
-            {{/if}}
           </div>
       </div>
       <div>

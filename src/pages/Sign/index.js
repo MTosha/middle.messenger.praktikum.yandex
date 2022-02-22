@@ -10,7 +10,6 @@ const root = document.querySelector("#root");
 export const SignIn = (element) => {
   const context = {
     title: "Sign in",
-    signIn: true,
     btnData: [
       {
         id: "sign-in",
@@ -29,12 +28,14 @@ export const SignIn = (element) => {
       {
         id: "login",
         label: "Login",
-        pass: false,
+        type: "text",
+        placeholder: "empty",
       },
       {
         id: "password",
         label: "Password",
-        pass: true,
+        type: "password",
+        placeholder: "empty",
       },
     ]
   }
@@ -44,7 +45,6 @@ export const SignIn = (element) => {
 export const SignUp = (element) => {
   const context = {
     title: "Sign up",
-    signIn: false,
     btnData: [
       {
         id: "sign-up",
@@ -64,43 +64,50 @@ export const SignUp = (element) => {
         id: "email",
         type: "email",
         label: "Email",
-        name_input: "email",
+        name: "email",
+        placeholder: "empty",
       },
       {
         id: "login",
         type: "text",
         label: "Login",
-        name_input: "login",
+        name: "login",
+        placeholder: "empty",
       },
       {
         id: "first_name",
         type: "text",
         label: "First name",
-        name_input: "first_name",
+        name: "first_name",
+        placeholder: "empty",
       },
       {
         id: "second_name",
         type: "text",
         label: "Second name",
-        name_input: "second_name",
+        name: "second_name",
+        placeholder: "empty",
       },
       {
         id: "phone",
         type: "phone",
         label: "Phone",
-        name_input: "phone",
+        name: "phone",
+        placeholder: "empty",
       },
       {
         id: "password",
         type: "password",
         label: "Password",
-        name_input: "password",
+        name: "password",
+        placeholder: "empty",
       },
       {
         id: "password-check",
         type: "password",
         label: "Password (confirm)",
-        name_input: "password-check",
+        name: "password-check",
+        placeholder: "empty",
       },
     ]
   }
