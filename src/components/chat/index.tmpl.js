@@ -1,11 +1,11 @@
-import * as Handlebars from "handlebars";
-import "./index.css";
+import * as Handlebars from 'handlebars';
+import './index.css';
 
-Handlebars.registerPartial("chat", `
+Handlebars.registerPartial('chat', `
   <div class="wrapper-chat">
     <div class="chat-img-wrapper">
       {{#if imgSrc}}
-        <img class="chat-img" src={{imgSrc}} />
+        <img class="chat-img" src={{imgSrc}} alt=""/>
       {{/if}}
     </div>
     <div class="content-left">
@@ -19,10 +19,10 @@ Handlebars.registerPartial("chat", `
       {{/if}}
     </div>
   </div>
-`)
+`);
 
-Handlebars.registerPartial("chooseChat", `
+Handlebars.registerPartial('chooseChat', `
   <div class="wrapper-chooseChat">
     <p class="chooseChat-text">Select a chat to send a message</p>
   </div>
-`)
+`);

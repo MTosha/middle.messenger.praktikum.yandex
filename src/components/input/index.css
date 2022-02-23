@@ -1,113 +1,112 @@
 label {
-    display: block;
-    color: var(--varMainGray);
+  display: block;
+  color: var(--varMainGray);
 }
 
 input {
-    display: block;
-    width: 100%;
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 13px;
-    color: var(--varMainBlack);
-    background-clip: padding-box;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    appearance: none;
+  display: block;
+  width: 100%;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 13px;
+  color: var(--varMainBlack);
+  background-clip: padding-box;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  appearance: none;
 }
 
 input::placeholder {
-    color: var(--varMainBlack);
-    opacity: 0.4;
+  color: var(--varMainBlack);
+  opacity: 0.4;
 }
 
 input:focus {
-    color: var(--varMainBlack);
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem var(--varMainShadow);
+  color: var(--varMainBlack);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem var(--varMainShadow);
 }
 
 input:disabled,
 input[readonly] {
-    opacity: 1;
+  opacity: 1;
 }
 
 .wrapper-input {
-    position: relative;
+  position: relative;
 }
 
 .wrapper-input input {
-    border: none;
-    border-bottom: 1px solid var(--varGray);
-    height: 70px;
+  border: none;
+  border-bottom: 1px solid var(--varGray);
+  height: 70px;
 }
 
 .wrapper-input input:focus {
-    outline: 0;
-    border-bottom: 1px solid var(--varMainBlue);
-    box-shadow: none;
+  outline: 0;
+  border-bottom: 1px solid var(--varMainBlue);
+  box-shadow: none;
 }
 
 .wrapper-input label {
-    position: absolute;
-    font-size: 13px;
-    top: 0;
-    left: 0;
-    height: 100%;
-    padding-top: 45px;
-    pointer-events: none;
-    border: 1px solid transparent;
-    transform-origin: 0 0;
-    transition: color .15s ease-in-out, transform .15s ease-in-out;
+  position: absolute;
+  font-size: 13px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding-top: 45px;
+  pointer-events: none;
+  border: 1px solid transparent;
+  transform-origin: 0 0;
+  transition: color 0.15s ease-in-out, transform 0.15s ease-in-out;
 }
 
 .wrapper-input input::placeholder {
-    color: transparent;
+  color: transparent;
 }
 
 .wrapper-input input:focus,
 .wrapper-input input:not(:placeholder-shown) {
-    padding-top: 20px;
-    border-bottom: 1px solid var(--varMainBlue);
+  padding-top: 20px;
+  border-bottom: 1px solid var(--varMainBlue);
 }
 
-.wrapper-input input:focus~label,
-.wrapper-input input:not(:placeholder-shown)~label {
-    transform: scale(.80) translateY(-30px);
+.wrapper-input input:focus ~ label,
+.wrapper-input input:not(:placeholder-shown) ~ label {
+  transform: scale(0.8) translateY(-30px);
 }
-
 
 .wrapper-search {
-    position: relative;
-    width: calc(100% - 20px);
-    margin: 15px auto;
+  position: relative;
+  width: calc(100% - 20px);
+  margin: 15px auto;
 
-    input, button {
-        border: none;
-        outline: none;
-        border-radius: 5px;
-    }
+  input,
+  button {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  }
 
-    input {
-        width: 100%;
-        height: 42px;
-        background: var(--varBackWhite);
-        padding-left: 15px;
-        text-align: center;
-    }
+  input {
+    width: 100%;
+    height: 42px;
+    background: var(--varBackWhite);
+    padding-left: 15px;
+    text-align: center;
+  }
 
-    button {
-        height: 26px;
-        width: 26px;
-        position: absolute;
-        top: 8px;
-        right: 8px;
-        cursor: pointer;
-    }
+  button {
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+  }
 
-    button:before {
-        content: url("/static/icons/search.svg");
-        color: var(--varLightGray);
-
-    }
+  button::before {
+    content: url("/static/icons/search.svg");
+    color: var(--varLightGray);
+  }
 }

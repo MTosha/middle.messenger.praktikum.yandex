@@ -1,6 +1,6 @@
-import * as Handlebars from "handlebars";
+import * as Handlebars from 'handlebars';
 
-export const chats = Handlebars.compile(`
+const chats = Handlebars.compile(`
   <div class="wrapper-chats">
     <div class="chats-list">
         <a class="profile-link" href={{profileHref}}>
@@ -25,4 +25,6 @@ export const chats = Handlebars.compile(`
       {{/if}}
     </div>
   </div>
-`)
+`);
+
+export default chats;

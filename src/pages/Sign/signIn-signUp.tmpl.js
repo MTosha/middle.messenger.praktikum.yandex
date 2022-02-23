@@ -1,6 +1,6 @@
-import * as Handlebars from "handlebars";
+import * as Handlebars from 'handlebars';
 
-export const sign = Handlebars.compile(`
+const sign = Handlebars.compile(`
   <div class="outer">
     <div class="wrapper_sign">
       <div>
@@ -20,4 +20,6 @@ export const sign = Handlebars.compile(`
       </div>
     </div>
   </div>
-`)
+`);
+
+export default sign;

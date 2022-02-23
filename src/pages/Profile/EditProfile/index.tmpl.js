@@ -1,6 +1,6 @@
-import * as Handlebars from "handlebars";
+import * as Handlebars from 'handlebars';
 
-export const editProfile = Handlebars.compile(`
+const editProfile = Handlebars.compile(`
    <div class="wrapper-profile">
     <div class="wrapper-back-button">
         {{#backBtnData}}
@@ -24,6 +24,6 @@ export const editProfile = Handlebars.compile(`
       </div>
     </div>
    </div>
-`)
+`);
 
-
+export default editProfile;

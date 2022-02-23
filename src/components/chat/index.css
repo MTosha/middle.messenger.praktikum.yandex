@@ -1,75 +1,73 @@
 .wrapper-chat {
-    width: calc(100% - 20px);
-    height: 70px;
-    display: flex;
-    align-items: center;
-    padding: 10px 0;
-    margin: 0 10px;
-    border-top: 1px solid var(--varBorderGray);
+  width: calc(100% - 20px);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  margin: 0 10px;
+  border-top: 1px solid var(--varBorderGray);
 
-    .chat-img-wrapper {
-        width: 47px;
-        height: 47px;
-        border-radius: 50px;
-        background-color: var(--varBackWhite);
-        margin-right: 10px;
+  .chat-img-wrapper {
+    width: 47px;
+    height: 47px;
+    border-radius: 50px;
+    background-color: var(--varBackWhite);
+    margin-right: 10px;
+  }
 
+  .content-left {
+    flex: 1;
+
+    .name {
+      font-size: 13px;
+      font-weight: 600;
     }
 
-    .content-left {
-        flex: 1;
+    .chat-message {
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: 500;
+      color: var(--varMainGray);
+    }
+  }
 
-        .name {
-            font-size: 13px;
-            font-weight: 600;
-        }
+  .content-right {
+    height: 100%;
+    min-width: 20px;
 
-        .chat-message {
-            font-size: 12px;
-            line-height: 15px;
-            font-weight: 500;
-            color: var(--varMainGray);
-        }
-
+    .time {
+      margin: 13px 0;
+      font-size: 9px;
+      line-height: 13px;
+      font-weight: 500;
+      color: var(--varMainGray);
     }
 
-    .content-right {
-        height: 100%;
-        min-width: 20px;
-
-        .time {
-            margin: 13px 0;
-            font-size: 9px;
-            line-height: 13px;
-            font-weight: 500;
-            color: var(--varMainGray);
-        }
-
-        .unread-count {
-            width: 20px;
-            height: 20px;
-            border-radius: 20px;
-            background-color: var(--varMainBlue);
-            font-size: 11px;
-            line-height: 22px;
-            text-align: center;
-            font-weight: 500;
-            color: var(--varWhite);
-        }
+    .unread-count {
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+      background-color: var(--varMainBlue);
+      font-size: 11px;
+      line-height: 22px;
+      text-align: center;
+      font-weight: 500;
+      color: var(--varWhite);
     }
+  }
 }
 
 .wrapper-chooseChat {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 
-    .chooseChat-text {
-        font-size: 12px;
-        font-weight: 500;
-        text-align: center;
-        color: var(--varMainGray);
-    }
+  .chooseChat-text {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--varMainGray);
+  }
 }
