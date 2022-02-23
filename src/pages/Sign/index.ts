@@ -1,13 +1,14 @@
-import {sign} from "./signIn-signUp.tmpl";
 import "../..//components/button/index.tmpl.js";
 import "../..//components/button/index.css";
 import "../..//components/input/index.tmpl.js";
 import "../..//components/input/index.css";
 import "./index.css";
+import {errorsLog} from "../../utils/constans";
 
 const root = document.querySelector("#root");
+const sign = require("./signIn-signUp.tmpl")
 
-export const SignIn = (element) => {
+export const SignIn = (element: Element | null) => {
   const context = {
     title: "Sign in",
     btnData: [
@@ -29,20 +30,22 @@ export const SignIn = (element) => {
         id: "login",
         label: "Login",
         type: "text",
+        name: "login",
         placeholder: "empty",
       },
       {
         id: "password",
         label: "Password",
         type: "password",
+        name: "password",
         placeholder: "empty",
       },
     ]
   }
-  element.innerHTML = sign(context);
+  element ? element.innerHTML = sign(context) : console.error(errorsLog.notFoundElement);
 }
 
-export const SignUp = (element) => {
+export const SignUp = (element: Element | null) => {
   const context = {
     title: "Sign up",
     btnData: [
@@ -111,7 +114,7 @@ export const SignUp = (element) => {
       },
     ]
   }
-  element.innerHTML = sign(context);
+  element ? element.innerHTML = sign(context) : console.error(errorsLog.notFoundElement);
 }
 
 switch (window.location.pathname) {

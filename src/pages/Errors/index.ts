@@ -1,17 +1,18 @@
-import {error} from "./index.tmpl";
 import "./index.css";
-import {SignIn, SignUp} from "../Sign";
+import {IErrorContext} from "../../utils/interfaces";
+import {errorsLog} from "../../utils/constans";
 
 const root = document.querySelector("#root");
+const error = require("./index.tmpl")
 
-export const showError = (element, errorCode, text, href, hrefName) => {
-  const context = {
+export const showError = (element: Element | null, errorCode: number, text: string, href: string, hrefName: string): void => {
+  const context: IErrorContext = {
     errorCode: errorCode,
     text: text,
     href: href,
     hrefName: hrefName,
   }
-  element.innerHTML = error(context)
+  element ? element.innerHTML = error(context) : console.error(errorsLog.notFoundElement);
 }
 
 switch (window.location.pathname) {

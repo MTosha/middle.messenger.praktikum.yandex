@@ -1,4 +1,3 @@
-import {editProfile} from "./index.tmpl";
 import "../index.css";
 import "../../..//components/button/index.tmpl";
 import "../../..//components/button/index.css";
@@ -6,11 +5,14 @@ import "../../..//components/avatar/index.tmpl";
 import "../../..//components/avatar/index.css";
 import "../../..//components/input/index.tmpl";
 import "../../..//components/input/index.css";
+import {IEditProfileContext} from "../../../utils/interfaces";
+import {errorsLog} from "../../../utils/constans";
 
 const root = document.querySelector("#root");
+const editProfile  = require("./index.tmpl")
 
-export const EditProfile = (element) => {
-  const context = {
+export const EditProfile = (element: Element | null): void => {
+  const context: IEditProfileContext = {
     name: "Иван",
     backBtnData: {
       id: "back-btn",
@@ -24,7 +26,8 @@ export const EditProfile = (element) => {
         id: "email",
         type: "email",
         label: "Email",
-        name_input: "email",
+        name: "email",
+        placeholder: "pochta@yandex.ru",
         value: "pochta@yandex.ru",
         readonly: false,
       },
@@ -32,7 +35,8 @@ export const EditProfile = (element) => {
         id: "login",
         type: "text",
         label: "Login",
-        name_input: "login",
+        name: "login",
+        placeholder: "ivanivanov",
         value: "ivanivanov",
         readonly: false,
       },
@@ -40,7 +44,8 @@ export const EditProfile = (element) => {
         id: "first_name",
         type: "text",
         label: "First name",
-        name_input: "first_name",
+        name: "first_name",
+        placeholder: "Иван",
         value: "Иван",
         readonly: false,
       },
@@ -48,7 +53,8 @@ export const EditProfile = (element) => {
         id: "second_name",
         type: "text",
         label: "Second name",
-        name_input: "second_name",
+        name: "second_name",
+        placeholder: "Иванов",
         value: "Иванов",
         readonly: false,
       },
@@ -56,7 +62,8 @@ export const EditProfile = (element) => {
         id: "display_name",
         type: "text",
         label: "Display name",
-        name_input: "display_name",
+        name: "display_name",
+        placeholder: "Иван",
         value: "Иван",
         readonly: false,
       },
@@ -64,19 +71,20 @@ export const EditProfile = (element) => {
         id: "phone",
         type: "phone",
         label: "Phone",
-        name_input: "phone",
+        name: "phone",
+        placeholder: "+7(909)9673030",
         value: "+7(909)9673030",
         readonly: false,
       },
     ],
     btnData: {
         id: "save",
-        blue: true,
         text: "save",
+        blue: true,
         href: "/profile.html"
       },
   }
-  element.innerHTML = editProfile(context)
+  element ? element.innerHTML = editProfile(context) : console.error(errorsLog.notFoundElement);
 }
 
 EditProfile(root)
