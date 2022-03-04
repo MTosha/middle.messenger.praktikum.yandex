@@ -33,6 +33,12 @@ export interface IChatsContext {
     profileHref: string,
     profileName: string,
     inputData: IInputData,
+    activeChat?: boolean,
+    type?: string,
+    id?: string,
+    name?: string,
+    typeInput?: string,
+    placeholder?: string,
     chats: IChat[],
 }
 

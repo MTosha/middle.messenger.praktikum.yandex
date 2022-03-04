@@ -3,12 +3,13 @@ import "../..//components/button/index.css";
 import "../..//components/input/index.tmpl.js";
 import "../..//components/input/index.css";
 import "./index.css";
+// @ts-ignore
+import sign from "./signIn-signUp.tmpl";
 import {errorsLog} from "../../utils/constans";
 
 const root = document.querySelector("#root");
-const sign = require("./signIn-signUp.tmpl")
 
-export const SignIn = (element: Element | null) => {
+export const SignIn = (element: Element | null):void => {
   const context = {
     title: "Sign in",
     btnData: [

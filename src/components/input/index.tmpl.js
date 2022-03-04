@@ -11,7 +11,7 @@ const input = Handlebars.compile(`
 export default input;
 
 Handlebars.registerPartial('input', `
-    <div class="wrapper-input">
+    <div class="wrapper-input{{typeInput}}">
         <input type={{type}} id={{id}} name={{name}} placeholder={{placeholder}} 
         {{#if readonly}}readonly{{/if}}  {{#if value}}value={{value}}{{/if}}>
         <label for={{id}}>{{label}}</label>

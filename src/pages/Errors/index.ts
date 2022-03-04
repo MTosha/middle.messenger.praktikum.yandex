@@ -1,9 +1,10 @@
 import "./index.css";
 import {IErrorContext} from "../../utils/interfaces";
 import {errorsLog} from "../../utils/constans";
+// @ts-ignore
+import error from "./index.tmpl";
 
 const root = document.querySelector("#root");
-const error = require("./index.tmpl")
 
 export const showError = (element: Element | null, errorCode: number, text: string, href: string, hrefName: string): void => {
   const context: IErrorContext = {

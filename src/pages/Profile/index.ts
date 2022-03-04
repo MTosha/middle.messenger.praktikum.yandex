@@ -7,9 +7,10 @@ import "../../components/input/index.tmpl";
 import "../../components/input/index.css";
 import {IEditProfileContext} from "../../utils/interfaces";
 import {errorsLog} from "../../utils/constans";
+// @ts-ignore
+import profile from "./index.tmpl";
 
 const root = document.querySelector("#root");
-const profile = require("./index.tmpl")
 
 export const Profile = (element: Element | null): void => {
   const context: IEditProfileContext = {

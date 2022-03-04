@@ -3,9 +3,10 @@ import "../../components/input";
 import "../../components/chat/index.tmpl";
 import {IChatsContext} from "../../utils/interfaces";
 import {errorsLog} from "../../utils/constans";
+// @ts-ignore
+import chats from "./index.tmpl";
 
 const root = document.querySelector("#root");
-const chats = require("./index.tmpl")
 
 export const Chats = (element: Element | null): void => {
   const context: IChatsContext = {
@@ -16,6 +17,12 @@ export const Chats = (element: Element | null): void => {
       name: "search-input",
       placeholder: "Search",
     },
+    activeChat: true,
+    type: "text",
+    id: "message-input",
+    name: "message",
+    typeInput: "-message",
+    placeholder: "Message",
     chats: [
       {
         imgSrc: "",

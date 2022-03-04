@@ -5,7 +5,7 @@
   "engine": "14.19",
   "scripts": {
     "start": "npm install & npm run build & wait & node server.js",
-    "dev": "parcel static/index.html --port 3000",
+    "dev": "parcel static/index.html --port 3001",
     "build": "parcel build static/*.html"
   },
   "keywords": [],

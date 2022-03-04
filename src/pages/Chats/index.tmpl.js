@@ -20,6 +20,7 @@ const chats = Handlebars.compile(`
     </div>
     <div class="chats-active">
       {{#if activeChat}}
+        {{> сhatСonversation}}
       {{else}}
         {{> chooseChat}}
       {{/if}}

@@ -26,3 +26,23 @@ Handlebars.registerPartial('chooseChat', `
     <p class="chooseChat-text">Select a chat to send a message</p>
   </div>
 `);
+
+Handlebars.registerPartial('сhatСonversation', `
+  <div class="wrapper-сhatСonversation">
+    <div class="header">
+        <div class="chat-img-small">
+          {{#if imgSrc}}
+            <img src={{imgSrc}} alt=""/>
+          {{/if}}
+        </div>
+      <div class="name">Имя</div>
+      <div class="dots">
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="paper-clip"></div>
+        {{> input}}
+      <button class="send-button" type="submit"> </button>
+    </div>
+  </div>
+`);
