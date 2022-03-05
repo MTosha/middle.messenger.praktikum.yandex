@@ -1,0 +1,17 @@
+<div class="wrapper-chat">
+    <div class="chat-img-wrapper">
+        {{#if imgSrc}}
+            <img class="chat-img" src={{imgSrc}} alt=""/>
+        {{/if}}
+    </div>
+    <div class="content-left">
+        <p class="name">{{name}}</p>
+        <p class="chat-message">{{lastMessage}}</p>
+    </div>
+    <div class="content-right">
+        <p class="time">{{time}}</p>
+        {{#if unreadCount}}
+            <div class="unread-count">{{unreadCount}}</div>
+        {{/if}}
+    </div>
+</div>

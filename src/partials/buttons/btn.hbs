@@ -1,4 +1,5 @@
-
-    <a class="wrapper blue" id="{{id}}" href="{{href}}">
-        {{text}}
-    </a>
+{{#if blue}}
+    <a class="wrapper blue" id={{id}} href={{href}}>{{text}}</a>
+{{else}}
+    <a class="wrapper" id={{id}} href={{href}}>{{text}}</a>
+{{/if}}

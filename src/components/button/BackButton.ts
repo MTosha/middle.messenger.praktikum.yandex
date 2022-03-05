@@ -1,9 +1,9 @@
 import Block from "../../utils/Block";
 import {IBtn} from "../../utils/interfaces";
-import template from "../../partials/buttons/btn.hbs";
+import template from "../../partials/buttons/backBtn.hbs";
 import "./index.css";
 
-export class Button extends Block{
+export class BackButton extends Block{
     constructor(props: IBtn) {
         super(props);
     }

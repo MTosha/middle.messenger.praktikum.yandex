@@ -1,14 +1,24 @@
 export interface IBtn {
     id?: string,
-    text: string,
+    text?: string,
     blue?: boolean,
     red?: boolean,
     href?: string,
+    events?: {
+        click?: () => void
+    }
 }
 
 export interface IInput {
-    label: string,
-    pass: boolean,
+    label?: string,
+    pass?: boolean,
+    id?: string,
+    type?: string,
+    name?: string,
+    placeholder?: string,
+    value?: string,
+    readonly?: boolean,
+    typeInput?: string,
 }
 
 export interface IInputData {
@@ -30,16 +40,16 @@ export interface IChat {
 }
 
 export interface IChatsContext {
-    profileHref: string,
-    profileName: string,
-    inputData: IInputData,
+    profileHref?: string,
+    profileName?: string,
+    inputData?: IInputData,
     activeChat?: boolean,
     type?: string,
     id?: string,
     name?: string,
     typeInput?: string,
     placeholder?: string,
-    chats: IChat[],
+    chats?: IChat[],
 }
 
 export interface IErrorContext {
@@ -49,16 +59,12 @@ export interface IErrorContext {
     hrefName: string,
 }
 
-export interface IEditProfileContext {
-    name: string,
-    backBtnData: {
-        id: string,
-        href: string,
-    },
-    avatarData: {
-        avatarSrc: string
-    },
-    inputData: IInputData[],
-    btnData: IBtn | IBtn[],
+
+export interface IAvatar {
+    avatarSrc?: string
+}
+
+export interface IName {
+    name?: string
 }
 

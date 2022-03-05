@@ -1,25 +1,47 @@
 <div class="wrapper-chats">
     <div class="chats-list">
-        <a class="profile-link" href={{profileHref}}>
-            {{profileName}}<span class="arrow" /></a>
-        {{#inputData}}
+        <a class="profile-link" href="/profile">
+            Profile<span class="arrow" /></a>
             <form>
-                {{> searchInput}}
+                {{{ searchInput }}}
             </form>
-        {{/inputData}}
         <ul>
-            {{#each chats}}
-                <li>
-                    {{> chat}}
-                </li>
-            {{/each}}
+            <li>
+                {{{ chat1 }}}
+            </li>
+            <li>
+                {{{ chat2 }}}
+            </li>
+            <li>
+                {{{ chat3 }}}
+            </li>
+            <li>
+                {{{ chat4 }}}
+            </li>
+            <li>
+                {{{ chat5 }}}
+            </li>
+            <li>
+                {{{ chat6 }}}
+            </li>
+            <li>
+                {{{ chat7 }}}
+            </li>
+            <li>
+                {{{ chat8 }}}
+            </li>
+            <li>
+                {{{ chat9 }}}
+            </li>
+            <li>
+                {{{ chat10 }}}
+            </li>
+            <li>
+                {{{ chat11 }}}
+            </li>
         </ul>
     </div>
     <div class="chats-active">
-        {{#if activeChat}}
-            {{> сhatСonversation}}
-        {{else}}
-            {{> chooseChat}}
-        {{/if}}
+        {{{ chatConversation }}}
     </div>
 </div>
