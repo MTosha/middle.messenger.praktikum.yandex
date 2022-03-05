@@ -1,7 +1,14 @@
-#### ссылка на дизайн в Figma: https://www.figma.com/files/recent?fuid=1040260305409406663
-#### ссылка на домен Netlify https://cocky-swartz-3fbfcf.netlify.app/
+#### ссылка на дизайн в Figma: 
+https://www.figma.com/files/recent?fuid=1040260305409406663
+#### ссылка на домен Netlify 
+https://vigorous-bell-47a91d.netlify.app
 
-### ссылка на PR sprint_2 https://github.com/MTosha/middle.messenger.praktikum.yandex/pull/1
+### ссылка на PR sprint_2 https://github.com/MTosha/middle.messenger.praktikum.yandex/pull/4
+
+##по ошибке в начале работы не верно указал удаленную ветку и все изменения шли в коммитах на ветку main, каждый шаг 
+##выполнения практического задания сопровождался отдельным коммитом. Но не в ту ветку. Для проверки прикреплю не 
+##только ссылку на PR, но и архив с проектом. 
+##Прошу прощения за допущенную ошибку :(
 
 
 ## Описание
