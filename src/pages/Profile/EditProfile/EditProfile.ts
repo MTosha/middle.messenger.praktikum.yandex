@@ -8,6 +8,15 @@ import {Input} from "../../../components/input/Input";
 import {Button} from "../../../components/button/Button";
 
 export default class EditProfilePage extends Block {
+    data = {
+        email: "pochta@yandex.ru",
+        login: "ivanivanov",
+        firstName: "Иван",
+        secondName: "Иванов",
+        displayName: "Иван",
+        phone: "79099673030",
+    }
+
     protected initChildren() {
         this.children.backBtn = new BackButton({
             id: "back-btn",
@@ -27,6 +36,11 @@ export default class EditProfilePage extends Block {
             placeholder: "pochta@yandex.ru",
             value: "pochta@yandex.ru",
             readonly: false,
+            events: {
+                change: (e: any): void => {
+                    this.data.email = e.target.value;
+                }
+            }
         });
         this.children.inputLogin = new Input({
             id: "login",
@@ -36,6 +50,11 @@ export default class EditProfilePage extends Block {
             placeholder: "ivanivanov",
             value: "ivanivanov",
             readonly: false,
+            events: {
+                change: (e: any): void => {
+                    this.data.login = e.target.value;
+                }
+            }
         });
         this.children.inputFirstName = new Input({
             id: "first_name",
@@ -45,6 +64,11 @@ export default class EditProfilePage extends Block {
             placeholder: "Иван",
             value: "Иван",
             readonly: false,
+            events: {
+                change: (e: any): void => {
+                    this.data.firstName = e.target.value;
+                }
+            }
         });
         this.children.inputSecondName = new Input({
             id: "second_name",
@@ -54,6 +78,11 @@ export default class EditProfilePage extends Block {
             placeholder: "Иванов",
             value: "Иванов",
             readonly: false,
+            events: {
+                change: (e: any): void => {
+                    this.data.secondName = e.target.value;
+                }
+            }
         });
         this.children.inputDisplayName = new Input({
             id: "display_name",
@@ -63,21 +92,36 @@ export default class EditProfilePage extends Block {
             placeholder: "Иван",
             value: "Иван",
             readonly: false,
+            events: {
+                change: (e: any): void => {
+                    this.data.displayName = e.target.value;
+                }
+            }
         });
         this.children.inputPhone = new Input({
             id: "phone",
             type: "phone",
             label: "Phone",
             name: "phone",
-            placeholder: "+7(909)9673030",
-            value: "+7(909)9673030",
+            placeholder: "79099673030",
+            value: "79099673030",
             readonly: false,
+            events: {
+                change: (e: any): void => {
+                    this.data.phone = e.target.value;
+                }
+            }
         });
         this.children.saveButton = new Button({
             id: "save",
             text: "save",
             blue: true,
-            href: "/profile"
+            href: "/profile",
+            events: {
+                click: () => {
+                    localStorage.setItem('data', JSON.stringify(this.data));
+                }
+            }
         });
     }
 

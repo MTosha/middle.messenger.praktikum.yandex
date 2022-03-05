@@ -7,6 +7,7 @@ import ProfilePage from "./pages/Profile/Profile";
 import EditProfilePage from "./pages/Profile/EditProfile/EditProfile";
 import EditProfilePasswordPage from "./pages/Profile/EditProfilePassword/EditProfilePassword";
 import Error from "./pages/Errors/Error";
+import {validation} from "./utils/validation";
 
 document.addEventListener('DOMContentLoaded', () => {
     const signPage = new SignPage();
@@ -15,10 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const profilePage = new ProfilePage();
     const profileEditPage = new EditProfilePage();
     const profileEditPasswordPage = new EditProfilePasswordPage();
-
-    // setTimeout(() => {
-    //     renderDOM('#root', signPage2);
-    // }, 1500)
 
     switch (window.location.pathname) {
         case "/":
@@ -55,4 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 hrefName: "Back to chats",
             }))
     }
+
+    validation();
 });
+

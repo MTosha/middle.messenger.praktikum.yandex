@@ -19,6 +19,12 @@ export interface IInput {
     value?: string,
     readonly?: boolean,
     typeInput?: string,
+    events?: {
+        click?: () => void,
+        // eslint-disable-next-line no-unused-vars
+        blur?: (e: any) => void,
+        change?: (e: any) => void,
+    }
 }
 
 export interface IInputData {

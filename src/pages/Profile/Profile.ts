@@ -25,7 +25,7 @@ export default class ProfilePage extends Block {
             label: "Email",
             name: "email",
             placeholder: "pochta@yandex.ru",
-            value: "pochta@yandex.r123",
+            value: "pochta@yandex.ru",
             readonly: true,
         });
         this.children.inputLogin = new Input({
@@ -94,6 +94,10 @@ export default class ProfilePage extends Block {
     }
 
     render() {
+        if(localStorage.getItem('data')) {
+            console.log(JSON.parse(localStorage.getItem('data')!));
+            localStorage.clear();
+        }
         return this.compile(template, { })
     }
 }

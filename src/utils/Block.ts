@@ -46,8 +46,7 @@ export default class Block {
         Object.entries(propsAndChildren).map(([key, value]) => {
             if(value instanceof Block) {
                 children[key] = value;
-            // } else if (Array.isArray(value) && value.every(v => (v instanceof Block))) {
-            //     children[key] = value;
+
             } else {
                 props[key] = value;
             }
@@ -58,7 +57,7 @@ export default class Block {
 
     protected initChildren() {}
 
-    _registerEvents(eventBus) {
+    _registerEvents(eventBus: any) {
         eventBus.on(Block.EVENTS.INIT, this.init.bind(this));
         eventBus.on(Block.EVENTS.FLOW_CDM, this._componentDidMount.bind(this));
         eventBus.on(Block.EVENTS.FLOW_CDU, this._componentDidUpdate.bind(this));
@@ -70,13 +69,14 @@ export default class Block {
     }
 
     _componentDidMount() {
+        // @ts-ignore
         this.componentDidMount();
         this.eventBus().emit(Block.EVENTS.FLOW_RENDER);
     }
 
     componentDidMount(oldProps) {}
 
-    _componentDidUpdate(oldProps, newProps) {
+    _componentDidUpdate(oldProps: any, newProps: any) {
         if(this.componentDidUpdate(oldProps, newProps)) {
             this.eventBus().emit(Block.EVENTS.FLOW_RENDER)
         }
@@ -86,7 +86,7 @@ export default class Block {
         return true;
     }
 
-    setProps = nextProps => {
+    setProps = (nextProps: any) => {
         if (!nextProps) {
             return;
         }
@@ -120,9 +120,7 @@ export default class Block {
         return this.element;
     }
 
-    _makePropsProxy(props) {
-        // Можно и так передать this
-        // Такой способ больше не применяется с приходом ES6+
+    _makePropsProxy(props: any) {
         const self = this;
 
         return new Proxy(props, {
@@ -134,8 +132,6 @@ export default class Block {
                 const oldProps = {...target};
                 target[prop] = value;
 
-                // Запускаем обновление компоненты
-                // Плохой cloneDeep, в след итерации нужно заставлять добавлять cloneDeep им самим
                 self.eventBus().emit(Block.EVENTS.FLOW_CDU, oldProps, target);
                 return true;
             },
@@ -145,8 +141,7 @@ export default class Block {
         });
     }
 
-    _createDocumentElement(tagName) {
-        // Можно сделать метод, который через фрагменты в цикле создает сразу несколько блоков
+    _createDocumentElement(tagName: any) {
         return document.createElement(tagName);
     }
 
@@ -175,33 +170,18 @@ export default class Block {
         });
     }
 
+    // eslint-disable-next-line no-unused-vars
     compile(template: (context: any) => string, context: any) {
         const fragment = this._createDocumentElement('template') as HTMLTemplateElement;
 
         Object.entries(this.children).forEach(([key, child]) => {
-            console.log('context =', context)
-            // if(Array.isArray(child)) {
-            //     context[key] = child.map(child =>  `<div data-id="id-${child.id}"></div>`);
-            //     return
-            // }
             context[key] = `<div data-id="id-${child.id}"> </div>`
         })
-        console.log(context)
-        const htmlString = template(context);
-        console.log(htmlString)
+        fragment.innerHTML = template(context);
 
-        fragment.innerHTML = htmlString;
+        Object.entries(this.children).forEach(([, child]) => {
 
-        Object.entries(this.children).forEach(([key, child]) => {
-            console.log('child =', child)
-            console.log('child.id =', child.id)
-            // if(Array.isArray(child)) {
-            //     context[key] = child.map(child =>  `<div data-id="id-${child.id}"></div>`);
-            //     return
-            // }
             const stub = fragment.content.querySelector(`[data-id="id-${child.id}"]`)
-            console.log('child.id =', child.id)
-            console.log('stub =', stub)
 
             if(!stub) {
                 return;
@@ -214,10 +194,10 @@ export default class Block {
 
 
     show() {
-        this.getContent().style.display = "block";
+        this.getContent()!.style.display = "block";
     }
 
     hide() {
-        this.getContent().style.display = "none";
+        this.getContent()!.style.display = "none";
     }
 }
