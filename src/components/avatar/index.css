@@ -3,6 +3,10 @@
   height: 130px;
   margin: 0 auto;
   background-color: var(--varBackWhite);
+  background-image: url("../../../static/icons/user.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   border-radius: 130px;
   display: flex;
   justify-content: center;

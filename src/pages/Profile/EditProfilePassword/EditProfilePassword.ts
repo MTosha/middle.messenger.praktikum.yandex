@@ -5,8 +5,15 @@ import {BackButton} from "../../../components/button/BackButton";
 import {Avatar} from "../../../components/avatar/Avatar";
 import {Input} from "../../../components/input/Input";
 import {Button} from "../../../components/button/Button";
+import {validation} from "../../../utils/validation";
 
 export default class EditProfilePasswordPage extends Block {
+    constructor() {
+        super();
+
+        validation(this.getContent())
+    }
+
     protected initChildren() {
         this.children.backBtn = new BackButton({
             id: "back-btn",
@@ -51,6 +58,6 @@ export default class EditProfilePasswordPage extends Block {
     }
 
     render() {
-        return this.compile(template, { })
+        return this.compile(template, { });
     }
 }

@@ -12,6 +12,10 @@
     height: 47px;
     border-radius: 50px;
     background-color: var(--varBackWhite);
+    background-image: url("../../../static/icons/user.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     margin-right: 10px;
   }
 
@@ -64,12 +68,12 @@
   justify-content: center;
   align-items: center;
 
-.chooseChat-text {
-  font-size: 12px;
-  font-weight: 500;
-  text-align: center;
-  color: var(--varMainGray);
-}
+  .chooseChat-text {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--varMainGray);
+  }
 
 }
 
@@ -80,79 +84,83 @@
   flex-direction: column;
   margin: 10px;
 
-.header {
-  display: flex;
-  justify-content: flex-start;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--varBorderGray);
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--varBorderGray);
 
-.name {
-  align-self: center;
-  margin-left: 10px;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 13px;
-  color: var(--varMainBlack);
-}
+  .name {
+    align-self: center;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 13px;
+    color: var(--varMainBlack);
+  }
 
-.dots {
-  margin-left: auto;
-  align-self: center;
-  width: 20px;
-  height: 20px;
-  background-image: url("../../../static/icons/dots.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
+  .dots {
+    margin-left: auto;
+    align-self: center;
+    width: 20px;
+    height: 20px;
+    background-image: url("../../../static/icons/dots.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
 
-.chat-img-small {
-  width: 34px;
-  height: 34px;
-  border-radius: 50px;
-  background-color: var(--varBackWhite);
-  margin-left: 10px;
-}
-
-}
-
-.bottom {
-  margin-top: auto;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-top: 1px solid var(--varBorderGray);
-
-.paper-clip {
-  align-self: center;
-  margin-right: 10px;
-  width: 24px;
-  height: 24px;
-  background-image: url("../../../static/icons/paper-clip.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-
-.send-button {
-  display: block;
-  width: 28px;
-  height: 28px;
-  border-radius: 28px;
-  background-color: var(--varMainBlue);
-}
-
-.send-button::before {
-  content: url("/static/icons/arrow-right.svg");
-  width: 10px;
-  height: 10px;
-  right: 2px;
-  position: relative;
-}
+  .chat-img-small {
+    width: 34px;
+    height: 34px;
+    border-radius: 50px;
+    background-color: var(--varBackWhite);
+    background-image: url("../../../static/icons/user.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+  }
 
 }
+
+  .bottom {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-top: 1px solid var(--varBorderGray);
+
+    .paper-clip {
+      align-self: center;
+      margin-right: 10px;
+      width: 24px;
+      height: 24px;
+      background-image: url("../../../static/icons/paper-clip.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    .send-button {
+      display: block;
+      width: 28px;
+      height: 28px;
+      border-radius: 28px;
+      background-color: var(--varMainBlue);
+    }
+
+    .send-button::before {
+      content: url("/static/icons/arrow-right.svg");
+      width: 10px;
+      height: 10px;
+      right: 2px;
+      position: relative;
+    }
+
+  }
 }

@@ -121,18 +121,17 @@ export default class Block {
     }
 
     _makePropsProxy(props: any) {
-        const self = this;
-
         return new Proxy(props, {
             get(target, prop) {
                 const value = target[prop];
                 return typeof value === "function" ? value.bind(target) : value;
             },
-            set(target, prop, value) {
+            set: (target, prop, value) => {
                 const oldProps = {...target};
                 target[prop] = value;
 
-                self.eventBus().emit(Block.EVENTS.FLOW_CDU, oldProps, target);
+                // @ts-ignore
+                eventBus().emit(Block.EVENTS.FLOW_CDU, oldProps, target);
                 return true;
             },
             deleteProperty() {

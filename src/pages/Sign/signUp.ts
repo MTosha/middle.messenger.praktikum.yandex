@@ -3,9 +3,14 @@ import {Button} from "../../components/button/Button";
 import template from "./signUp.hbs";
 import "./index.css";
 import {Input} from "../../components/input/Input";
+import {validation} from "../../utils/validation";
 
 export default class SignUpPage extends Block {
+    constructor() {
+        super();
 
+        validation(this.getContent())
+    }
 
     protected initChildren() {
         this.children.inputEmail = new Input({

@@ -3,11 +3,14 @@ import {Button} from "../../components/button/Button";
 import template from "./sign.hbs";
 import "./index.css";
 import {Input} from "../../components/input/Input";
+import {validation} from "../../utils/validation";
 
 export default class SignPage extends Block {
-    // constructor(props: {btnText: string}) {
-    //     super(props);
-    // }
+    constructor() {
+        super();
+
+        validation(this.getContent())
+    }
 
     protected initChildren() {
         this.children.inputLogin = new Input({
@@ -37,15 +40,6 @@ export default class SignPage extends Block {
             href: "/sign-up",
         });
     }
-
-    // componentDidUpdate(oldProps: any, newProps: any): boolean {
-    //     if(oldProps.btnText !== newProps.btnText) {
-    //         this.children.btn.setProps({
-    //             text: newProps.btnText,
-    //         })
-    //     }
-    //     return super.componentDidUpdate(oldProps, newProps);
-    // }
 
     render() {
         return this.compile(template, { })

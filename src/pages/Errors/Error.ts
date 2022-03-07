@@ -8,6 +8,6 @@ export default class Error extends Block {
         super(props);
     }
     render() {
-        return this.compile(template, {...this.props})
+        return this.compile(template, {...this.props});
     }
 }

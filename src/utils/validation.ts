@@ -1,9 +1,10 @@
-export const validation = (): void => {
-    const password = document.querySelector('input[type="password"]');
-    const email = document.querySelector('input[type="email"]');
-    const phone = document.querySelector('input[type="phone"]');
-    const word = document.querySelector('input[type="text"]');
-    const message = document.querySelector('#message-input');
+export const validation = (scope: HTMLElement | null): void => {
+console.log('start validation!')
+    const password = scope?.querySelector('input[type="password"]');
+    const email = scope?.querySelector('input[type="email"]');
+    const phone = scope?.querySelector('input[type="phone"]');
+    const word = scope?.querySelector('input[type="text"]');
+    const message = scope?.querySelector('#message-input');
 
     function CheckPassword(value: string): void {
         const passw = /^[A-Za-z]\w{7,14}$/;
@@ -31,7 +32,7 @@ export const validation = (): void => {
 
     function CheckWords(value: string): void {
         const words = new RegExp('fuck');
-        if (value.toLowerCase().match(words)) {
+        if (value.toLowerCase().match(words) || value.length < 3) {
             alert('Edit please!')
             return;
         }
@@ -71,12 +72,10 @@ export const validation = (): void => {
     });
 
     message?.addEventListener('blur', (event) => {
-        console.log(event)
         CheckWords(event?.target?.value);
     });
 
     message?.removeEventListener('blur', (event) => {
-        console.log(event)
         CheckWords(event?.target?.value);
     });
 }

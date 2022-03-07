@@ -7,33 +7,30 @@ import ProfilePage from "./pages/Profile/Profile";
 import EditProfilePage from "./pages/Profile/EditProfile/EditProfile";
 import EditProfilePasswordPage from "./pages/Profile/EditProfilePassword/EditProfilePassword";
 import Error from "./pages/Errors/Error";
-import {validation} from "./utils/validation";
-
-document.addEventListener('DOMContentLoaded', () => {
-    const signPage = new SignPage();
-    const signUpPage = new SignUpPage();
-    const chatsPage = new ChatsPage();
-    const profilePage = new ProfilePage();
-    const profileEditPage = new EditProfilePage();
-    const profileEditPasswordPage = new EditProfilePasswordPage();
 
     switch (window.location.pathname) {
         case "/":
+            const signPage = new SignPage();
             renderDOM('#root', signPage);
             break;
         case "/sign-up":
+            const signUpPage = new SignUpPage();
             renderDOM('#root', signUpPage);
             break;
         case "/chats":
+            const chatsPage = new ChatsPage();
             renderDOM('#root', chatsPage);
             break;
         case "/profile":
+            const profilePage = new ProfilePage();
             renderDOM('#root', profilePage);
             break;
         case "/edit-profile":
+            const profileEditPage = new EditProfilePage();
             renderDOM('#root', profileEditPage);
             break;
         case "/edit-profile-password":
+            const profileEditPasswordPage = new EditProfilePasswordPage();
             renderDOM('#root', profileEditPasswordPage);
             break;
         case "/500":
@@ -52,7 +49,3 @@ document.addEventListener('DOMContentLoaded', () => {
                 hrefName: "Back to chats",
             }))
     }
-
-    validation();
-});
-

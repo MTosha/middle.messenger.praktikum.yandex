@@ -4,8 +4,15 @@ import "./index.css";
 import {SearchInput} from "../../components/input/SearchInput";
 import {Chat} from "../../components/chat/Chat";
 import {ChatConversation} from "../../components/chat/ChatConversation";
+import {validation} from "../../utils/validation";
 
 export default class ChatsPage extends Block {
+    constructor() {
+        super();
+
+        validation(this.getContent())
+    }
+
     protected initChildren() {
         this.children.searchInput = new SearchInput({
             id: "search-input",

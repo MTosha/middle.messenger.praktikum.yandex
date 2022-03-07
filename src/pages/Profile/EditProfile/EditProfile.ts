@@ -6,8 +6,15 @@ import {Avatar} from "../../../components/avatar/Avatar";
 import {Name} from "../../../components/avatar/name/Name";
 import {Input} from "../../../components/input/Input";
 import {Button} from "../../../components/button/Button";
+import {validation} from "../../../utils/validation";
 
 export default class EditProfilePage extends Block {
+    constructor() {
+        super();
+
+        validation(this.getContent())
+    }
+
     data = {
         email: "pochta@yandex.ru",
         login: "ivanivanov",
@@ -39,8 +46,8 @@ export default class EditProfilePage extends Block {
             events: {
                 change: (e: any): void => {
                     this.data.email = e.target.value;
-                }
-            }
+                },
+            },
         });
         this.children.inputLogin = new Input({
             id: "login",
@@ -53,8 +60,8 @@ export default class EditProfilePage extends Block {
             events: {
                 change: (e: any): void => {
                     this.data.login = e.target.value;
-                }
-            }
+                },
+            },
         });
         this.children.inputFirstName = new Input({
             id: "first_name",
@@ -67,8 +74,8 @@ export default class EditProfilePage extends Block {
             events: {
                 change: (e: any): void => {
                     this.data.firstName = e.target.value;
-                }
-            }
+                },
+            },
         });
         this.children.inputSecondName = new Input({
             id: "second_name",
@@ -81,8 +88,8 @@ export default class EditProfilePage extends Block {
             events: {
                 change: (e: any): void => {
                     this.data.secondName = e.target.value;
-                }
-            }
+                },
+            },
         });
         this.children.inputDisplayName = new Input({
             id: "display_name",
@@ -95,8 +102,8 @@ export default class EditProfilePage extends Block {
             events: {
                 change: (e: any): void => {
                     this.data.displayName = e.target.value;
-                }
-            }
+                },
+            },
         });
         this.children.inputPhone = new Input({
             id: "phone",
@@ -109,8 +116,8 @@ export default class EditProfilePage extends Block {
             events: {
                 change: (e: any): void => {
                     this.data.phone = e.target.value;
-                }
-            }
+                },
+            },
         });
         this.children.saveButton = new Button({
             id: "save",
@@ -120,8 +127,8 @@ export default class EditProfilePage extends Block {
             events: {
                 click: () => {
                     localStorage.setItem('data', JSON.stringify(this.data));
-                }
-            }
+                },
+            },
         });
     }
 

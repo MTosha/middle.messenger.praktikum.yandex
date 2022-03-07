@@ -105,10 +105,10 @@ input[readonly] {
     cursor: pointer;
   }
 
-button::before {
-  content: url("/static/icons/search.svg");
-  color: var(--varLightGray);
-}
+  button::before {
+    content: url("/static/icons/search.svg");
+    color: var(--varLightGray);
+  }
 
 }
 
@@ -116,18 +116,18 @@ button::before {
   width: 100%;
   margin-right: 10px;
 
-input {
-  display: block;
-  border: none;
-  height: 32px;
-  padding: 10px 20px;
-  width: 100%;
-  background: var(--varBackWhite);
-  border-radius: 30px;
-}
+  input {
+    display: block;
+    border: none;
+    height: 32px;
+    padding: 10px 20px;
+    width: 100%;
+    background: var(--varBackWhite);
+    border-radius: 30px;
+  }
 
-label {
-  display: none;
-}
+  label {
+    display: none;
+  }
 
 }
