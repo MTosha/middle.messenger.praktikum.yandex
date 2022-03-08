@@ -1,48 +1,48 @@
 .wrapper {
-    display: block;
-    text-decoration: none;
-    width: 100%;
-    padding: 12px 0;
-    text-align: center;
-    border-radius: 8px;
-    color: var(--varMainBlue);
-    font-size: 13px;
-    line-height: 13px;
-    font-weight: 500;
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  padding: 12px 0;
+  text-align: center;
+  border-radius: 8px;
+  color: var(--varMainBlue);
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 500;
 }
 
 .blue {
-    background-color: var(--varMainBlue);
-    color: var(--varWhite);
+  background-color: var(--varMainBlue);
+  color: var(--varWhite);
 }
 
 .back-button {
-    display: block;
-    width: 28px;
-    height: 28px;
-    border-radius: 28px;
-    background-color: var(--varMainBlue);
+  display: block;
+  width: 28px;
+  height: 28px;
+  border-radius: 28px;
+  background-color: var(--varMainBlue);
 }
 
-.back-button:before {
-    content: url("/static/icons/arrow-left.svg");
-    width: 10px;
-    height: 10px;
-    position: relative;
-    top: 4px;
-    left: 5px;
+.back-button::before {
+  content: url("/static/icons/arrow-left.svg");
+  width: 10px;
+  height: 10px;
+  position: relative;
+  top: 4px;
+  left: 5px;
 }
 
 .edit {
-    font-size: 13px;
-    line-height: 13px;
-    font-weight: 500;
-    color: var(--varMainBlue);
-    text-decoration: none;
-    cursor: pointer;
-    margin: 15px auto;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 500;
+  color: var(--varMainBlue);
+  text-decoration: none;
+  cursor: pointer;
+  margin: 15px auto;
 }
 
 .red {
-    color: var(--varMainRed);
+  color: var(--varMainRed);
 }
