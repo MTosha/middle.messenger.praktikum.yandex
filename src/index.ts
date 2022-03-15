@@ -1,4 +1,4 @@
-import {renderDOM} from "./utils/renderDOM";
+// import {renderDOM} from "./utils/renderDOM";
 import "/config/index.css";
 import SignPage from "./pages/Sign/sign";
 import SignUpPage from "./pages/Sign/signUp";
@@ -7,45 +7,49 @@ import ProfilePage from "./pages/Profile/Profile";
 import EditProfilePage from "./pages/Profile/EditProfile/EditProfile";
 import EditProfilePasswordPage from "./pages/Profile/EditProfilePassword/EditProfilePassword";
 import Error from "./pages/Errors/Error";
+import Router from "./utils/Router";
+
+const router = new Router()
+
+router
+    .use("/", SignPage)
+    .use("/sign-up", SignUpPage)
+    .use("/chats", ChatsPage)
+    .use("/profile", ProfilePage)
+    .use("/edit-profile", EditProfilePage)
+    .use("/edit-profile-password", EditProfilePasswordPage)
+    .use("/500", Error)
+    .use("/404", Error)
+    .start()
 
     switch (window.location.pathname) {
         case "/":
-            const signPage = new SignPage();
-            renderDOM('#root', signPage);
+            router.go("/");
             break;
         case "/sign-up":
-            const signUpPage = new SignUpPage();
-            renderDOM('#root', signUpPage);
+            router.go("/sign-up");
             break;
         case "/chats":
-            const chatsPage = new ChatsPage();
-            renderDOM('#root', chatsPage);
+            router.go("/chats");
             break;
         case "/profile":
-            const profilePage = new ProfilePage();
-            renderDOM('#root', profilePage);
+            router.go("/profile");
             break;
         case "/edit-profile":
-            const profileEditPage = new EditProfilePage();
-            renderDOM('#root', profileEditPage);
+            router.go("/edit-profile");
             break;
         case "/edit-profile-password":
-            const profileEditPasswordPage = new EditProfilePasswordPage();
-            renderDOM('#root', profileEditPasswordPage);
+            router.go("/edit-profile-password");
             break;
         case "/500":
-            renderDOM('#root', new Error({
-                errorCode: 500,
-                text: "Мы уже фиксим",
-                href: "/chats",
-                hrefName: "Back to chats",
-            }))
+            router.go("/500");
             break;
         default:
-            renderDOM('#root', new Error({
-                errorCode: 404,
-                text: "Не туда попали",
-                href: "/chats",
-                hrefName: "Back to chats",
-            }))
+            router.go("/404");
+            // renderDOM('#root', new Error({
+            //     errorCode: 404,
+            //     text: "Не туда попали",
+            //     href: "/chats",
+            //     hrefName: "Back to chats",
+            // }))
     }
